@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy · Poro Tracker</title>
+    <meta name="description" content="What Poro Tracker keeps, where, and who sees it." />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+  <a class="brand" href="./"><img src="images/logo.png" alt="" width="36" height="36" /> Poro Tracker</a>
+  <nav aria-label="Site">
+    <a href="./#features">Features</a>
+    <a href="./#download">Download</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <div class="socials">
+    <a class="social youtube" href="https://www.youtube.com/@Noobby" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.4 3.1-5.4 3.1Z" /></svg>
+    </a>
+    <a class="social metafy" href="https://metafy.gg/@noobby" target="_blank" rel="noopener" title="Metafy" aria-label="Metafy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19V5h3.2L12 12.4 17.8 5H21v14h-3.2v-8.6L12 17.6l-5.8-7.2V19H3Z" /></svg>
+    </a>
+  </div>
+</header>
+    <main>
+      <section class="page">
+        <h1>Privacy</h1>
+        <p class="muted">Last updated October 31, 2026</p>
+        <p>
+          Poro Tracker is a free fan-made tracker for Riftbound on Rift Atlas: a desktop app for Windows and Linux, and a browser extension for Chrome and Firefox. In
+          short: <b>everything it keeps stays on your computer</b>, unless you choose to sign in to a Poro Tracker account (see below). No ads and no analytics.
+        </p>
+
+        <h2>What Poro Tracker keeps</h2>
+        <ul>
+          <li>Your decks and the deck you're playing.</li>
+          <li>
+            Your match history: results, scores, dates, the format, your and your opponents' in-game names and legends, both decklists (unless a player made theirs
+            private), battlefields, who went first, and which of your cards were drawn and played.
+          </li>
+          <li>Notes you write on matches and replays.</li>
+          <li>Replays of your games, downloaded from Rift Atlas, and replays you import.</li>
+          <li>Your settings, and the card list (costs and types) read from Rift Atlas's page.</li>
+        </ul>
+        <p>
+          The desktop app keeps this in its data folder (or a folder you choose in Settings). The extension keeps it in your browser's storage for the extension.
+          Neither sends it to us or to anyone else.
+        </p>
+
+        <h2>What it reads, and from where</h2>
+        <ul>
+          <li>
+            <b>Rift Atlas:</b> while you play, Poro Tracker reads the game's live connection and what's on screen in the Rift Atlas page. After a game, it asks Rift
+            Atlas's match history for both decklists, the official result and the replay, using your own Rift Atlas sign-in, the way Rift Atlas's own page does. These
+            requests only read; your sign-in never leaves the Rift Atlas page. The only thing Poro Tracker ever clicks is Rift Atlas's "Private deck" box, when you turn
+            that setting on.
+          </li>
+          <li>
+            <b>Discord (desktop app, optional):</b> when "Show my game on Discord" is on, the app tells the Discord app on your computer your legend, your opponent's
+            legend, the score and how long the game has been going, to show on your Discord profile. Opponents' names are never shown. Turn it off in Settings.
+          </li>
+          <li>
+            <b>App and extension sync:</b> while both are running, they share your matches, decks, notes and replays directly on your computer (through
+            127.0.0.1). This never goes over the internet.
+          </li>
+          <li>
+            <b>Updates:</b> the desktop app checks GitHub for new versions and downloads them from there, and this website shows the latest version from GitHub. Like
+            any download, GitHub sees your IP address; see GitHub's privacy statement.
+          </li>
+        </ul>
+
+        <h2>If you sign in to an account (optional)</h2>
+        <p>
+          You can sign in with Discord in Settings → Account, so your history follows you to other computers and the app and the extension stay in step. Only if
+          you do:
+        </p>
+        <ul>
+          <li>
+            <b>From Discord:</b> your Discord user ID, display name, picture and email address, which Discord shares when you sign in. They're used to know it's
+            you; your email isn't used for anything else.
+          </li>
+          <li>
+            <b>Saved to your account:</b> your matches, decks and replay notes (what's listed above, without your settings), and the replays you wrote notes on. Replays
+            without notes stay on your computer.
+          </li>
+          <li>
+            <b>Where:</b> with Supabase, the cloud service that runs Poro Tracker's accounts. Other players can't see or change what's in your account. Poro
+            Tracker's maintainer can access it, only to keep the service running and to fix problems you report. It's never sold or shared.
+          </li>
+          <li>
+            <b>Deleting it:</b> Settings → Account → <b>Delete my account and data</b> removes your account and everything saved in it, right away. What's on your
+            computer stays. Signing out keeps your account, so you can sign in again later.
+          </li>
+        </ul>
+
+        <h2>Sharing</h2>
+        <p>
+          Nothing is shared unless you do it: a backup file you export, or a replay you send with "Send with notes" goes wherever you save or send it. Rift Atlas,
+          Discord and GitHub handle what they receive under their own privacy policies.
+        </p>
+
+        <h2>Your choices</h2>
+        <ul>
+          <li>Settings can turn off saving match history and saving replays.</li>
+          <li>Delete any match, deck or replay from its tab; it's gone from the app and the extension.</li>
+          <li>Uninstalling the extension deletes everything it kept. For the app, delete its data folder (Settings → Your data → Open folder).</li>
+        </ul>
+
+        <h2>Changes and contact</h2>
+        <p>
+          If this policy changes, the new version is posted here with a new date. Questions about your data, or anything else? Email
+          <a href="mailto:contact@porotracker.com">contact@porotracker.com</a>.
+        </p>
+      </section>
+    </main>
+    <footer>
+  <nav aria-label="Footer">
+    <a href="mailto:contact@porotracker.com">Contact</a>
+  <a href="changelog.html">Changelog</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/NoobbyTV/poro-tracker-releases/releases/latest" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <p class="small muted">
+    Poro Tracker is a free fan project, not affiliated with Rift Atlas. Poro Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of
+    Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or
+    registered trademarks of Riot Games, Inc.
+  </p>
+</footer>
+  </body>
+</html>
