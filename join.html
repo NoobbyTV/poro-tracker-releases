@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join a group · Poro Tracker</title>
+    <meta name="description" content="You're invited to a group on Poro Tracker, the free Riftbound tracker for Rift Atlas." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+  <a class="brand" href="./"><img src="images/logo.png" alt="" width="36" height="36" /> Poro Tracker</a>
+  <nav aria-label="Site">
+    <a href="./#features">Features</a>
+    <a href="./#download">Download</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <div class="socials">
+    <a class="social youtube" href="https://www.youtube.com/@Noobby" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.4 3.1-5.4 3.1Z" /></svg>
+    </a>
+    <a class="social metafy" href="https://metafy.gg/@noobby" target="_blank" rel="noopener" title="Metafy" aria-label="Metafy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19V5h3.2L12 12.4 17.8 5H21v14h-3.2v-8.6L12 17.6l-5.8-7.2V19H3Z" /></svg>
+    </a>
+  </div>
+</header>
+    <main>
+      <section class="page join">
+        <h1>You're invited to a group</h1>
+        <p>
+          Someone invited you to their group on Poro Tracker, the free tracker for Riftbound on Rift Atlas. In a group, everyone's matches come together: a shared
+          matchup grid with the group's own playbook, the week's leaderboard, each other's replays to watch and add notes to, posted decks, and who's playing right
+          now.
+        </p>
+
+        <div class="invite" id="invite" hidden>
+          <span class="muted small">Your invite code</span>
+          <span class="invite-code" id="code"></span>
+          <button class="button" id="copy" type="button">Copy the code</button>
+        </div>
+        <p class="muted" id="no-code" hidden>This link doesn't have an invite code in it. Ask whoever invited you to send it again.</p>
+
+        <h2>How to join</h2>
+        <ol>
+          <li>
+            <b>Get Poro Tracker</b>: the <a href="./#download">app for Windows or Linux</a>, or the browser extension for <a href="https://chromewebstore.google.com/detail/poro-tracker/bhjnaeodigddnpbfbooijanlfbafikge">Chrome</a> or
+            <a href="https://addons.mozilla.org/firefox/addon/poro-tracker/">Firefox</a>. Already have it? Make sure it's up to date.
+          </li>
+          <li><b>Open the Hub</b>, the people icon in Poro Tracker's rail, and sign in with Discord.</li>
+          <li><b>Join a group</b>: paste the code, or this page's link, and press Join.</li>
+        </ol>
+        <p class="muted small">
+          Codes work for 7 days. From the day you join, the group sees the matches you play: legends, deck names, results and scores, your opponents' names,
+          decklists and replays, and never your own notes. You can share older matches, keep a deck or a match out, turn sharing off or leave at any time.
+          <a href="privacy.html#groups">More in the privacy policy.</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+  <nav aria-label="Footer">
+    <a href="mailto:contact@porotracker.com">Contact</a>
+  <a href="changelog.html">Changelog</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/NoobbyTV/poro-tracker-releases/releases/latest" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <p class="small muted">
+    Poro Tracker is a free fan project, not affiliated with Rift Atlas. Poro Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of
+    Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or
+    registered trademarks of Riot Games, Inc.
+  </p>
+</footer>
+    <script>
+      // The code is in the link after "#", so it never reaches any server.
+      (() => {
+        const code = decodeURIComponent(location.hash.slice(1)).trim().toUpperCase();
+        if (!/^[A-HJ-NP-Z2-9]{8}$/.test(code)) {
+          document.getElementById("no-code").hidden = false;
+          return;
+        }
+        document.getElementById("code").textContent = code;
+        document.getElementById("invite").hidden = false;
+        const copy = document.getElementById("copy");
+        copy.addEventListener("click", () =>
+          navigator.clipboard.writeText(code).then(
+            () => (copy.textContent = "Copied"),
+            () => (copy.textContent = "Select the code to copy it")
+          )
+        );
+      })();
+    </script>
+  </body>
+</html>

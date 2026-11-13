@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Changelog · Poro Tracker</title>
+    <meta name="description" content="What's new in each version of Poro Tracker." />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+  <a class="brand" href="./"><img src="images/logo.png" alt="" width="36" height="36" /> Poro Tracker</a>
+  <nav aria-label="Site">
+    <a href="./#features">Features</a>
+    <a href="./#download">Download</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+  <div class="socials">
+    <a class="social youtube" href="https://www.youtube.com/@Noobby" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.4 3.1-5.4 3.1Z" /></svg>
+    </a>
+    <a class="social metafy" href="https://metafy.gg/@noobby" target="_blank" rel="noopener" title="Metafy" aria-label="Metafy">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 19V5h3.2L12 12.4 17.8 5H21v14h-3.2v-8.6L12 17.6l-5.8-7.2V19H3Z" /></svg>
+    </a>
+  </div>
+</header>
+    <main>
+      <section class="page">
+        <h1>Changelog</h1>
+        <p class="muted">What's new in each version. The browser extension's version is in brackets. <a href="./#download">Download the latest</a>.</p>
+        <article class="release"><h2>0.5.2 (extension 3.3.2) — November 13, 2026</h2><ul><li>New: deck versions. Edit your deck in Rift Atlas and it stays the same deck: the edited list becomes its list, the list it had becomes an earlier version, and its matches and stats stay together. A new or imported deck is a new deck. Sideboarding between games is never a new version.</li><li>New: merge decks. In Decks, "Merge" makes two decks one when they're really the same deck: the matches and lists of one become the other's, and it leaves your Decks. No match is deleted.</li><li>Matches of a deleted deck show in Decks too, to merge them into one of your decks so they count with it.</li><li>Decks shows each deck's versions: when you started playing each list, what changed (cards, battlefields, runes, sideboard), and how it did.</li><li>Editing a deck's list in Decks keeps the list it had as a version too.</li><li>Fixed: saving a deck in Decks forgot which Rift Atlas saved deck it was and the group decks it was linked to.</li></ul></article>
+        <article class="release"><h2>0.5.1 (extension 3.3.1) — November 12, 2026</h2><ul><li>Friends has its own section on the rail, with a count of the friend requests and group invitations waiting for your answer. Joining a group from an invitation opens it in the Hub.</li><li>Faster friends: requests and invitations show up within seconds (Poro Tracker checks every 15 seconds while it's on screen, from any section, and as soon as you come back to it), and accepting, declining, adding, inviting and cancelling change on screen at once.</li><li>The Hub opens at once with what it showed last, then catches up. An open group stays up to date (new members and matches) every 30 seconds, without flashing "updating…".</li><li>Fixed: the Hub counted unfinished matches (left before they had a result) in its numbers but not in the record next to them, so a week could say "6 matches" next to "3–1". The Hub and its images now count finished matches only, so they always add up; draws, if any, show as a third number (3–1–1).</li><li>Smoother: switching sections does about half the work it did; Rift Atlas's card list is read once instead of once for every "Copy deck code" button.</li></ul></article>
+        <article class="release"><h2>0.5.0 (extension 3.3.0) — November 11, 2026</h2><ul><li>New: groups, in the new Hub section. Create a group for your friends or your team and invite them with a code; from then on, everyone's matches are shared in the group. Groups need a Poro Tracker account (Sign in with Discord).</li><li>A group's Overview shows who's in a game right now, this week's leaderboard, last week's recap and the latest matches.</li><li>The group's matchup grid, by player and period. Click a matchup for its matches and the group's notes on how to play it.</li><li>Watch your teammates' replays, and add notes at any moment of them for the whole group.</li><li>Post your decks to the group and see everyone's results with them. "Add to my decks" copies one, and your matches with your copy count too.</li><li>Share the group's stats as an image, to paste in your group's Discord: the week's leaderboard and recap, the matchup grid (or every matchup, however many legends), or a posted deck with the group's results, each legend with its picture. Copy it and paste it with Ctrl+V, or save it. Members are named on it, opponents aren't.</li><li>New: friends, in the Hub's Friends page. Add someone with their friend code (or from a group you're both in); once they accept, you can invite each other to your groups in one click, and they join from the Hub. Nobody can find you without your code.</li><li>Send a teammate's replay as a file, with the group's notes, like your own: "Send replay file" on a shared match, or "Send with notes" in the replay.</li><li>New: "Copy deck code" on your decks, the group's decks and a match's decklists. Paste it in Rift Atlas's deck import.</li><li>You decide what you share, in the group's Members tab: turn sharing off, add matches from before you joined, keep decks out, or stop showing when you're playing. In History, open a match and use "Shared with" to keep one match out. Your own notes are never shared, and leaving a group never deletes your matches.</li><li>Fixed: a match could be saved with the legend the opponent played in the match before or after, which put it under the wrong legend in your stats. Rift Atlas's decklists now decide both players' legends, and matches already saved with the wrong one are corrected, as long as their decklist is on file.</li><li>Settings no longer has Troubleshooting (saving game traffic to a file); it was for finding bugs with us. If it was on, it's off now. For a bug, write to contact@porotracker.com.</li><li>New: change the opponent's legend yourself. In History, open a match and use "Opponent's legend", for private decks and anything else that was read wrong. It suggests the legends from your matches and decks, typing just "Jinx" finds "Jinx, Loose Cannon", and a legend you pick stays.</li></ul></article>
+        <article class="release"><h2>0.4.0 (extension 3.2.0) — October 31, 2026</h2><ul><li>New: an optional Poro Tracker account. Sign in with Discord in Settings → Account, and your matches, decks and notes, and the replays you wrote notes on, are kept in your account: they follow you to other computers, and the app and the browser extension stay in step even when only one is open.</li><li>Replays without notes stay on your computer. Settings → Account can delete your account and everything in it at any time; what's on your computer stays.</li><li>In Firefox, signing in first asks your OK to send your history to your account. Turning that off in Firefox's add-on settings signs you out.</li><li>The browser extension is on the Chrome Web Store and Firefox Add-ons, and updates itself. The app's Settings and porotracker.com link to both.</li></ul></article>
+        <article class="release"><h2>0.3.2 (extension 3.1.1) — October 29, 2026</h2><ul><li>Poro Tracker has a website: porotracker.com, with downloads, features, the changelog and the privacy policy. Questions and bug reports: contact@porotracker.com.</li><li>Settings in the app has a link to download the browser extension, with install steps; the extension's Settings has a link to download the app. Both go to porotracker.com.</li><li>When the extension can't sync with the app, it now says why (the app isn't running, it's an older version, or the browser blocks it), and the app's Settings says whether it's waiting for the extension.</li><li>In the browser, clicking the section that's open hides the panel; the button now says so.</li><li>Lighter in the browser: the extension now only listens to the game's own connection, not Rift Atlas's other live data, which was read all the time while signed in.</li><li>New setting in the extension: turn off "Move Rift Atlas over to make room" to have the panel float over the game instead.</li></ul></article>
+        <article class="release"><h2>0.3.1 (extension 3.1.0) — October 28, 2026</h2><ul><li>The browser extension's panel is now part of the Rift Atlas page, like the app: the rail on the left, the panel beside the game, and the game moved over to make room instead of covered. The toolbar button and Alt+T show and hide it.</li><li>Smoother games in the browser, especially in Firefox: the extension does much less work on the game's own thread.</li></ul></article>
+        <article class="release"><h2>0.3.0 (extension 3.0.0) — October 28, 2026</h2><ul><li>New: the Poro Tracker browser extension for Chrome and Firefox (and Edge and Opera). The same tracker as the app, for games you play in the browser.</li><li>New: while the app is open, it and the extension share your matches, decks, notes and replays, both ways.</li><li>Matches saved in the old 2.x extension are brought in when it updates.</li><li>Deleting a match, deck or replay now asks "Sure?" right where you clicked.</li></ul></article>
+        <article class="release"><h2>0.2.2 — October 28, 2026</h2><ul><li>Loading decklists for an older match no longer switches the deck you're tracking.</li><li>Sideboarding in a Bo3 keeps the same deck instead of adding a copy, and the deck tracker counts the list as played.</li><li>Fixing a Bo1 result by hand also fixes going first/second, battlefield and game win rate stats.</li><li>Smoother while playing: the side panels don't redraw on every game update.</li></ul></article>
+        <article class="release"><h2>0.2.1 — October 28, 2026</h2><ul><li>Neeko decks: the legends Neeko can copy are no longer taken for the legend you play.</li><li>History: one compact line per match (result, the opponent's legend, score, date) that opens for details.</li><li>Tidier Decks and Replays, and safer saving when quitting, moving your data folder or loading a backup.</li></ul></article>
+        <article class="release"><h2>0.2.0 — October 28, 2026</h2><ul><li>The first public version: live score and deck tracking, match history, stats, Insights (a report on each deck, read from every game's replay), replays with coaching notes, and your game on your Discord status.</li><li>Updates itself on Windows (installer) and Linux (AppImage).</li><li>Choose where your stats and replays are saved, turn saving off, and back everything up to one file.</li></ul></article>
+      </section>
+    </main>
+    <footer>
+  <nav aria-label="Footer">
+    <a href="mailto:contact@porotracker.com">Contact</a>
+  <a href="changelog.html">Changelog</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/NoobbyTV/poro-tracker-releases/releases/latest" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <p class="small muted">
+    Poro Tracker is a free fan project, not affiliated with Rift Atlas. Poro Tracker isn't endorsed by Riot Games and doesn't reflect the views or opinions of
+    Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or
+    registered trademarks of Riot Games, Inc.
+  </p>
+</footer>
+  </body>
+</html>
